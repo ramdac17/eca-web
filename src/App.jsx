@@ -49,7 +49,7 @@ const App = () => {
 
       {/* Hero Section */}
       <header className="relative py-24 bg-eca-navy overflow-hidden">
-        {/* Decorative background element */}
+        {/* Decorative background element    */}
         <div className="absolute top-0 right-0 w-1/3 h-full bg-eca-yellow/10 -skew-x-12 transform translate-x-20" />
 
         <div className="container mx-auto px-6 relative z-10">
@@ -143,19 +143,22 @@ const App = () => {
               href="#"
               className="block hover:text-eca-yellow items-center gap-1"
             >
-              <ChevronRight size={16} /> Eldon Enclosures
+              <ChevronRight size={16} />
+              Eldon Enclosures
             </a>
             <a
               href="#"
               className="block hover:text-eca-yellow items-center gap-1"
             >
-              <ChevronRight size={16} /> IBOCO Wire Ducts
+              <ChevronRight size={16} />
+              IBOCO Wire Ducts
             </a>
             <a
               href="#"
               className="block hover:text-eca-yellow items-center gap-1"
             >
-              <ChevronRight size={16} /> Pfannenberg Cooling
+              <ChevronRight size={16} />
+              Pfannenberg Cooling
             </a>
           </div>
         </div>
