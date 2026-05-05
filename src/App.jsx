@@ -1,5 +1,7 @@
 import React from "react";
 import { Phone, Mail, MapPin, Clock, ChevronRight } from "lucide-react";
+// Import the logo from your assets folder
+import ecaLogo from "./assets/ecaLogoV1.jpg";
 
 const App = () => {
   return (
@@ -40,7 +42,7 @@ const App = () => {
             <a href="#" className="hover:text-eca-orange transition">
               Products
             </a>
-            <button className="bg-eca-orange text-white px-5 py-2 rounded shadow-md hover:bg-orange-600 transition">
+            <button className="bg-eca-orange text-white px-5 py-2 rounded shadow-md hover:bg-orange-600 transition cursor-pointer">
               Get Quote
             </button>
           </div>
@@ -48,28 +50,45 @@ const App = () => {
       </nav>
 
       {/* Hero Section */}
-      <header className="relative py-24 bg-eca-navy overflow-hidden">
-        {/* Decorative background element    */}
+      <header className="relative py-16 md:py-24 bg-eca-navy overflow-hidden">
+        {/* Decorative background element */}
         <div className="absolute top-0 right-0 w-1/3 h-full bg-eca-yellow/10 -skew-x-12 transform translate-x-20" />
 
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
-              Your Partner in{" "}
-              <span className="text-eca-yellow text-glow">Electrical</span> &
-              Industrial Excellence
-            </h1>
-            <p className="text-xl text-slate-300 mb-10 leading-relaxed border-l-4 border-eca-orange pl-6">
-              Distributing world-class brands like Schneider Electric, Eldon,
-              and Pfannenberg to power the Philippines' infrastructure.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <button className="bg-eca-yellow text-eca-navy px-8 py-4 rounded-md font-black text-lg hover:bg-yellow-400 transition transform hover:-translate-y-1">
-                VIEW CATALOG
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-white/10 transition">
-                OUR SERVICES
-              </button>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="max-w-3xl">
+              <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
+                Your Partner in{" "}
+                <span className="text-eca-yellow text-glow">Electrical</span> &
+                Industrial Excellence
+              </h1>
+              <p className="text-xl text-slate-300 mb-10 leading-relaxed border-l-4 border-eca-orange pl-6">
+                Distributing world-class brands like Schneider Electric, Eldon,
+                and Pfannenberg to power the Philippines' infrastructure.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <button className="bg-eca-yellow text-eca-navy px-8 py-4 rounded-md font-black text-lg hover:bg-yellow-400 transition transform hover:-translate-y-1 cursor-pointer">
+                  VIEW CATALOG
+                </button>
+                <button className="border-2 border-white text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-white/10 transition cursor-pointer">
+                  OUR SERVICES
+                </button>
+              </div>
+            </div>
+
+            {/* Right Content - Logo Image */}
+            <div className="hidden lg:flex justify-center items-center">
+              <div className="w-full max-w-md h-[400px] bg-white rounded-2xl flex items-center justify-center overflow-hidden shadow-2xl relative group">
+                {/* Logo Image */}
+                <img
+                  src={ecaLogo}
+                  alt="ECA Sales Corporation Logo"
+                  className="w-full h-full object-contain p-8 group-hover:scale-105 transition-transform duration-500"
+                />
+                {/* Subtle Overlay */}
+                <div className="absolute inset-0 bg-eca-navy/5 group-hover:bg-transparent transition-colors" />
+              </div>
             </div>
           </div>
         </div>
@@ -141,21 +160,21 @@ const App = () => {
             </h4>
             <a
               href="#"
-              className="block hover:text-eca-yellow items-center gap-1"
+              className="flex hover:text-eca-yellow items-center gap-1"
             >
               <ChevronRight size={16} />
               Eldon Enclosures
             </a>
             <a
               href="#"
-              className="block hover:text-eca-yellow items-center gap-1"
+              className="flex hover:text-eca-yellow items-center gap-1"
             >
               <ChevronRight size={16} />
               IBOCO Wire Ducts
             </a>
             <a
               href="#"
-              className="block hover:text-eca-yellow items-center gap-1"
+              className="flex hover:text-eca-yellow items-center gap-1"
             >
               <ChevronRight size={16} />
               Pfannenberg Cooling
