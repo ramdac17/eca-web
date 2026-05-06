@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 // Import the logo from your assets folder
 import ecaLogo from "./assets/ecaLogoV3.jpg";
+import ecaBanner from "./assets/ecaBannerV1.jpg";
 
 const App = () => {
   const [theme, setTheme] = useState("blue");
@@ -249,17 +250,57 @@ const App = () => {
       </section>
 
       {/* Footer (Simplified for brevity, similar to your existing code) */}
-      <footer
-        className={`${theme === "blue" ? "bg-slate-900" : "bg-[#2a1d15]"} text-white py-12 transition-colors duration-500`}
-      >
-        <div className="container mx-auto px-6 text-center md:text-left">
-          <h3 className={`${active.accent} font-black text-xl mb-4`}>
-            ECA SALES CORP.
-          </h3>
-          <p className="text-slate-400 max-w-xs mx-auto md:mx-0">
-            Marikina City, Philippines. Reliable Industrial Solutions since
-            1990.
-          </p>
+      {/* Contact Footer */}
+      <footer className="bg-slate-900 text-white py-16">
+        <div className="container mx-auto px-6 grid md:grid-cols-3 gap-12">
+          <div>
+            <h3 className="text-eca-yellow font-black text-xl mb-6">
+              <img src={ecaBanner} />
+            </h3>
+            <p className="text-slate-400 leading-relaxed">
+              Leading supplier of high-quality electrical components and
+              enclosures for industrial applications since 1990.
+            </p>
+          </div>
+          <div className="space-y-4">
+            <h4 className="font-bold text-eca-orange uppercase mb-4">
+              Visit Us
+            </h4>
+            <div className="flex gap-3 text-slate-300">
+              <MapPin className="shrink-0 text-eca-yellow" />
+              <p>
+                #11, Unit B, Mt. Kennedy St., Mountain View Village, Marikina
+                City, 1801
+              </p>
+            </div>
+            <div className="flex gap-3 text-slate-300">
+              <Clock className="shrink-0 text-eca-yellow" />
+              <p>
+                Mon-Fri: 8:00 AM - 5:00 PM
+                <br />
+                Sat: 8:00 AM - 12:00 PM
+              </p>
+            </div>
+          </div>
+          <div className="space-y-4 text-slate-300">
+            <h4 className="font-bold text-eca-orange uppercase mb-4">
+              CONTACT US
+            </h4>
+            <a
+              href="#"
+              className="flex hover:text-eca-yellow items-center gap-1"
+            >
+              <ChevronRight size={16} />
+              Mobile: 8-891-89-59
+            </a>
+            <a
+              href="#"
+              className="flex hover:text-eca-yellow items-center gap-1"
+            >
+              <ChevronRight size={16} />
+              Email: sales@ecasales.com
+            </a>
+          </div>
         </div>
       </footer>
     </div>
